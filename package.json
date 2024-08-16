@@ -5,7 +5,7 @@
   "main": "twiMLServer.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node src/twiMLServer.js"
+    "start": "node twiMLServer.js"
   },
   "author": "",
   "license": "ISC",
