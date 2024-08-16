@@ -1,0 +1,17 @@
+{
+  "name": "twiml-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "twiMLServer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node src/twiMLServer.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "twilio": "^5.2.2"
+  }
+}
