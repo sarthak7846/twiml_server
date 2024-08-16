@@ -1,6 +1,6 @@
 const twilio = require("twilio");
 const express = require("express");
-const sendMessage = require("./messenger");
+const sendMessage = require("../messenger");
 const path = require("path");
 
 const envFilePath = path.join(__dirname, "../dev.env");
@@ -12,7 +12,7 @@ const port = process.env.TWILIO_PORT;
 app.use(express.urlencoded({ extended: true }));
 const VoiceResponse = twilio.twiml.VoiceResponse;
 
-app.post("/twiml", (req, res) => {
+app.post("/api/twiml", (req, res) => {
   const response = new VoiceResponse();
 
   const audioURL =
@@ -29,7 +29,7 @@ app.post("/twiml", (req, res) => {
   res.send(response.toString());
 });
 
-app.post("/action", (req, res) => {
+app.post("/api/action", (req, res) => {
   const response = new VoiceResponse();
 
   const enteredDigit = req.body.Digits;
